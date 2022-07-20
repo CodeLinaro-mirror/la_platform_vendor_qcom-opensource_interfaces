@@ -21,8 +21,7 @@
 // later when a module using the interface is updated, e.g., Mainline modules.
 
 package vendor.qti.hardware.wifi.supplicant;
-@VintfStability
-interface ISupplicantVendorStaIface {
-  String doDriverCmd(in String command);
-  void registerSupplicantVendorStaIfaceCallback(in vendor.qti.hardware.wifi.supplicant.ISupplicantVendorStaIfaceCallback callback);
+@Backing(type="int") @VintfStability
+enum IVendorIfaceType {
+  STA = 0,
 }
