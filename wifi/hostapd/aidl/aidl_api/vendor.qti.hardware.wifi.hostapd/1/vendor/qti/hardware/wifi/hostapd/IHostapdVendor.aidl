@@ -20,9 +20,10 @@
 // with such a backward incompatible change, it has a high risk of breaking
 // later when a module using the interface is updated, e.g., Mainline modules.
 
-package vendor.qti.hardware.wifi.supplicant;
+package vendor.qti.hardware.wifi.hostapd;
 @VintfStability
-interface ISupplicantVendorStaIface {
-  String doDriverCmd(in String command);
-  void registerSupplicantVendorStaIfaceCallback(in vendor.qti.hardware.wifi.supplicant.ISupplicantVendorStaIfaceCallback callback);
+interface IHostapdVendor {
+  String[] listVendorInterfaces();
+  void registerHostapdVendorCallback(in vendor.qti.hardware.wifi.hostapd.IHostapdVendorCallback callback);
+  String doDriverCmd(in String iface, in String cmd);
 }
