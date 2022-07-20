@@ -22,7 +22,10 @@
 
 package vendor.qti.hardware.wifi.supplicant;
 @VintfStability
-interface ISupplicantVendorStaIface {
-  String doDriverCmd(in String command);
-  void registerSupplicantVendorStaIfaceCallback(in vendor.qti.hardware.wifi.supplicant.ISupplicantVendorStaIfaceCallback callback);
+enum SupplicantVendorStatusCode {
+  SUCCESS = 0,
+  FAILURE_UNKNOWN = 1,
+  FAILURE_ARGS_INVALID = 2,
+  FAILURE_IFACE_INVALID = 3,
+  FAILURE_UNSUPPORTED = 4,
 }
