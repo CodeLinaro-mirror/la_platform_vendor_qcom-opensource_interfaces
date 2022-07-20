@@ -22,7 +22,7 @@
 
 package vendor.qti.hardware.wifi.supplicant;
 @VintfStability
-interface ISupplicantVendorStaIface {
-  String doDriverCmd(in String command);
-  void registerSupplicantVendorStaIfaceCallback(in vendor.qti.hardware.wifi.supplicant.ISupplicantVendorStaIfaceCallback callback);
+interface ISupplicantVendor {
+  vendor.qti.hardware.wifi.supplicant.ISupplicantVendorStaIface getVendorInterface(in vendor.qti.hardware.wifi.supplicant.IVendorIfaceInfo ifaceInfo);
+  vendor.qti.hardware.wifi.supplicant.IVendorIfaceInfo[] listVendorInterfaces();
 }
