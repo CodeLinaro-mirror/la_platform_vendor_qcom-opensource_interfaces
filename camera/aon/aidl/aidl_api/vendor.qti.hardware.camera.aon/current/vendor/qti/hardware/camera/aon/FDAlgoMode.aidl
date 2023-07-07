@@ -20,12 +20,12 @@
 // with such a backward incompatible change, it has a high risk of breaking
 // later when a module using the interface is updated, e.g., Mainline modules.
 
-package vendor.qti.hardware.camera.offlinecamera;
+package vendor.qti.hardware.camera.aon;
 @VintfStability
-parcelable OfflineSessionConfigureInfo {
-  String cameraId;
-  android.hardware.camera.device.Stream[] streams;
-  vendor.qti.hardware.camera.offlinecamera.OpMode mode;
-  android.hardware.camera.device.CameraMetadata configureSetting;
-  int opModes;
+parcelable FDAlgoMode {
+  int width;
+  int height;
+  boolean isIslandModeCapable;
+  vendor.qti.hardware.camera.aon.FDEngineType fdEngine;
+  int supportedFDEvtTypeMask;
 }
