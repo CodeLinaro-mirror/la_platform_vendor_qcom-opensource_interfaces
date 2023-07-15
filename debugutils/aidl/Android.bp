@@ -1,16 +1,17 @@
 aidl_interface {
-    name: "vendor.qti.hardware.wifi.supplicant",
-    system_ext_specific: true,
+    name: "vendor.qti.hardware.debugutils_aidl",
     vendor_available: true,
-
-    srcs: [
-        "vendor/qti/hardware/wifi/supplicant/*.aidl",
-    ],
+    srcs: ["vendor/qti/hardware/debugutils/*.aidl"],
     stability: "vintf",
     backend: {
+        cpp: {
+            enabled: false,
+        },
         java: {
             sdk_version: "module_current",
-            min_sdk_version: "Tiramisu",
+        },
+        ndk: {
+            enabled: true,
         },
     },
     versions_with_info: [
@@ -18,10 +19,7 @@ aidl_interface {
             version: "1",
             imports: [],
         },
-        {
-            version: "2",
-            imports: [],
-        },
-
     ],
+    frozen: true,
+
 }

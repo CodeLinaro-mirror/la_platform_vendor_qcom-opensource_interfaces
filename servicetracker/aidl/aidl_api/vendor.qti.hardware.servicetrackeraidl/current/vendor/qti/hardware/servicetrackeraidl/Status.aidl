@@ -1,7 +1,7 @@
-/* Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
- *
- * SPDX-License-Identifier: BSD-3-Clause-Clear
- */
+/*
+*Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+*SPDX-License-Identifier: BSD-3-Clause-Clear
+*/
 ///////////////////////////////////////////////////////////////////////////////
 // THIS FILE IS IMMUTABLE. DO NOT EDIT IN ANY CASE.                          //
 ///////////////////////////////////////////////////////////////////////////////
@@ -20,9 +20,12 @@
 // with such a backward incompatible change, it has a high risk of breaking
 // later when a module using the interface is updated, e.g., Mainline modules.
 
-package vendor.qti.hardware.wifi.supplicant;
-@VintfStability
-interface ISupplicantVendorStaIface {
-  String doDriverCmd(in String command);
-  void registerSupplicantVendorStaIfaceCallback(in vendor.qti.hardware.wifi.supplicant.ISupplicantVendorStaIfaceCallback callback);
+package vendor.qti.hardware.servicetrackeraidl;
+@Backing(type="int") @VintfStability
+enum Status {
+  SUCCESS = 0,
+  ERROR_NOT_AVAILABLE = 1,
+  ERROR_INVALID_ARGS = 2,
+  ERROR_NOT_SUPPORTED = 3,
+  ERROR_UNKNOWN = 4,
 }
