@@ -20,14 +20,12 @@
 // with such a backward incompatible change, it has a high risk of breaking
 // later when a module using the interface is updated, e.g., Mainline modules.
 
-package vendor.qti.hardware.camera.offlinecamera;
+package vendor.qti.hardware.camera.aon;
 @Backing(type="int") @VintfStability
-enum OpMode {
-  OFFLINEBAYER2YUV = 0,
-  OFFLINEYUV2JPEG = 1,
-  OFFLINEYUV2YUV = 2,
-  OFFLINEHWMF = 3,
-  OFFLINEQLL = 4,
-  OFFLINERAW2RAW = 5,
-  OFFLINERAW2JPEG = 6,
+enum AONServiceType {
+  FaceDetect = 0,
+  FaceDetectPro = 1,
+  QRCode = 2,
+  VendorDefinedStart = 0x1000000,
+  VendorDefinedEnd,
 }

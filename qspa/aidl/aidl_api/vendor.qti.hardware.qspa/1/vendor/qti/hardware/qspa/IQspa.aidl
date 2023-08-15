@@ -1,7 +1,7 @@
 /*
- * {Copyright (c) 2023 Qualcomm Innovation Center, Inc.
- * All rights reserved. SPDX-License-Identifier: BSD-3-Clause-Clear}
- */
+ *Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+ *SPDX-License-Identifier: BSD-3-Clause-Clear
+*/
 ///////////////////////////////////////////////////////////////////////////////
 // THIS FILE IS IMMUTABLE. DO NOT EDIT IN ANY CASE.                          //
 ///////////////////////////////////////////////////////////////////////////////
@@ -20,14 +20,14 @@
 // with such a backward incompatible change, it has a high risk of breaking
 // later when a module using the interface is updated, e.g., Mainline modules.
 
-package vendor.qti.hardware.camera.offlinecamera;
-@Backing(type="int") @VintfStability
-enum OpMode {
-  OFFLINEBAYER2YUV = 0,
-  OFFLINEYUV2JPEG = 1,
-  OFFLINEYUV2YUV = 2,
-  OFFLINEHWMF = 3,
-  OFFLINEQLL = 4,
-  OFFLINERAW2RAW = 5,
-  OFFLINERAW2JPEG = 6,
+package vendor.qti.hardware.qspa;
+@VintfStability
+interface IQspa {
+  vendor.qti.hardware.qspa.PartInfo[] get_all_subparts();
+  String[] get_available_parts();
+  int[] get_subpart_info(in String part);
+  int get_num_available_cpus();
+  int get_num_available_clusters();
+  int get_num_physical_clusters();
+  int[] get_cpus_of_physical_clusters(in int physical_cluster_number);
 }

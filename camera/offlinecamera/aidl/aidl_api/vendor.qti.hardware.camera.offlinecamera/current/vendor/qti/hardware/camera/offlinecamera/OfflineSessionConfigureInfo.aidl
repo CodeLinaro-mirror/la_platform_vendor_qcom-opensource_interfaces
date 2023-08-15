@@ -27,4 +27,5 @@ parcelable OfflineSessionConfigureInfo {
   android.hardware.camera.device.Stream[] streams;
   vendor.qti.hardware.camera.offlinecamera.OpMode mode;
   android.hardware.camera.device.CameraMetadata configureSetting;
+  int opModes;
 }

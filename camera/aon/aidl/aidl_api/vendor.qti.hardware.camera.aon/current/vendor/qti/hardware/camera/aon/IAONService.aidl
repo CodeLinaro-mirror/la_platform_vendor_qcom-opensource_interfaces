@@ -20,14 +20,10 @@
 // with such a backward incompatible change, it has a high risk of breaking
 // later when a module using the interface is updated, e.g., Mainline modules.
 
-package vendor.qti.hardware.camera.offlinecamera;
-@Backing(type="int") @VintfStability
-enum OpMode {
-  OFFLINEBAYER2YUV = 0,
-  OFFLINEYUV2JPEG = 1,
-  OFFLINEYUV2YUV = 2,
-  OFFLINEHWMF = 3,
-  OFFLINEQLL = 4,
-  OFFLINERAW2RAW = 5,
-  OFFLINERAW2JPEG = 6,
+package vendor.qti.hardware.camera.aon;
+@VintfStability
+interface IAONService {
+  vendor.qti.hardware.camera.aon.AONSensorInfo[] GetAONSensorInfoList();
+  long RegisterClient(in vendor.qti.hardware.camera.aon.IAONServiceCallback callback, in vendor.qti.hardware.camera.aon.AONRegisterInfo regInfo);
+  vendor.qti.hardware.camera.aon.Status UnregisterClient(in long clientHandle);
 }
