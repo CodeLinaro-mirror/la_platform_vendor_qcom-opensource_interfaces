@@ -4,6 +4,10 @@ hidl_interface {
     name: "vendor.qti.hardware.wifi.supplicant@2.1",
     root: "vendor.qti.hardware.wifi",
     system_ext_specific: true,
+    apex_available: [
+      "//apex_available:anyapex",
+      "//apex_available:platform",
+    ],
     srcs: [
         "types.hal",
         "ISupplicantVendor.hal",
