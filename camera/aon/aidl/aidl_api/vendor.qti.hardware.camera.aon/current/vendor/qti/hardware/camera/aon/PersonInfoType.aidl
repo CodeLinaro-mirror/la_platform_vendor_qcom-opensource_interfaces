@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2023-2024 Qualcomm Innovation Center, Inc. All rights reserved.
+ * Copyright (c) 2024 Qualcomm Innovation Center, Inc. All rights reserved.
  * SPDX-License-Identifier: BSD-3-Clause-Clear
  */
 ///////////////////////////////////////////////////////////////////////////////
@@ -21,12 +21,8 @@
 // later when a module using the interface is updated, e.g., Mainline modules.
 
 package vendor.qti.hardware.camera.aon;
-@Backing(type="int") @VintfStability
-enum FDEvtType {
-  FaceDetected = 1,
-  FaceNotDetected = 2,
-  GazeDetected = 4,
-  GazeNotDetected = 8,
-  PersonDetected = 16,
-  PersonNotDetected = 32,
+@VintfStability
+parcelable PersonInfoType {
+  int confidence;
+  vendor.qti.hardware.camera.aon.CameraRectangle rect;
 }

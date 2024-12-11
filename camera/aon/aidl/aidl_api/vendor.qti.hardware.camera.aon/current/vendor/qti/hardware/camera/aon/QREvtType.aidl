@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+ * Copyright (c) 2023-2024 Qualcomm Innovation Center, Inc. All rights reserved.
  * SPDX-License-Identifier: BSD-3-Clause-Clear
  */
 ///////////////////////////////////////////////////////////////////////////////
@@ -25,4 +25,8 @@ package vendor.qti.hardware.camera.aon;
 enum QREvtType {
   QRCodeDetected = 1,
   QRCodeNotDetected = 2,
+  BarCodeDetected = 4,
+  BarCodeNotDetected = 8,
+  TikTokCodeDetected = 16,
+  TikTokCodeNotDetected = 32,
 }

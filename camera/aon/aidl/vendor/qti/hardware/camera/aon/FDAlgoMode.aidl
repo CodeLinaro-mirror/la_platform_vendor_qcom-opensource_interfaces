@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+ * Copyright (c) 2023-2024 Qualcomm Innovation Center, Inc. All rights reserved.
  * SPDX-License-Identifier: BSD-3-Clause-Clear
  */
 
@@ -30,8 +30,9 @@ parcelable FDAlgoMode {
     FDEngineType fdEngine;
     /**
      * A bit-mask indicating which FDEvtType are supported
-     * in this FDAlgoMode. If both FaceDetected & GazeDetected are
-     * supported, the supportedFDEvtTypeMask will be 0x5(0x1|0x4)
+     * in this FDAlgoMode. If both FaceDetected & GazeDetected &
+     * PersonDetected supported, the supportedFDEvtTypeMask will be
+     * 0x15(0x1|0x4|0x10)
      */
     int supportedFDEvtTypeMask;
 }
