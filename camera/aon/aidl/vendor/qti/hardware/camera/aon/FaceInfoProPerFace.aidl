@@ -1,11 +1,12 @@
 /*
- * Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+ * Copyright (c) 2023-2024 Qualcomm Innovation Center, Inc. All rights reserved.
  * SPDX-License-Identifier: BSD-3-Clause-Clear
  */
 
 package vendor.qti.hardware.camera.aon;
 
 import vendor.qti.hardware.camera.aon.FacePosType;
+import vendor.qti.hardware.camera.aon.PersonInfoType;
 
 /**
  * The information per face passed from the event of FaceDetectPro service type
@@ -42,4 +43,14 @@ parcelable FaceInfoProPerFace {
      * is set to 1 by client in RegisterClient.
      */
     boolean isGazeDetected;
+    /**
+     * Whether an face is detected
+     * This is required to be checked to know if this FaceInfoProPerFace result
+     * contains person info only or both personInfo with valid face info
+     */
+    boolean isFaceDetected;
+    /**
+     * PersonInfo of the ROI which will always be valid
+     */
+    @nullable PersonInfoType personInfo;
 }

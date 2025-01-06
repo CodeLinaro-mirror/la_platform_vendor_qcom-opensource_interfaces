@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+ * Copyright (c) 2023-2024 Qualcomm Innovation Center, Inc. All rights reserved.
  * SPDX-License-Identifier: BSD-3-Clause-Clear
  */
 
@@ -22,4 +22,24 @@ enum QREvtType {
      * This indicates that QRCode detection was performed and a QRCode is not detected.
      */
     QRCodeNotDetected = 2,
+
+    /**
+     * This indicates that Barcode detection was performed and a Barcode is detected.
+     */
+    BarCodeDetected = 4,
+
+    /**
+     * This indicates that Barcode detection was performed and a Barcode is not detected.
+     */
+    BarCodeNotDetected = 8,
+
+    /**
+     * This indicates that Tiktok detection was performed and a Tiktok code is detected.
+     */
+    TikTokCodeDetected = 16,
+
+    /**
+     * This indicates that Tiktok detection was performed and a Tiktok is not detected.
+     */
+    TikTokCodeNotDetected = 32,
 }
