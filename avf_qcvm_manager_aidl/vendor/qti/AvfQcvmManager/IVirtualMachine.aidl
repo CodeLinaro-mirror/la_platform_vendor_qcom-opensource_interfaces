@@ -17,10 +17,10 @@ interface IVirtualMachine {
     oneway void start(IVirtualMachineCallback callback);
 
     /** If the VM has the capability to Force Stop, then force stop the VM */
-    oneway void stop();
+    oneway void stop(IVirtualMachineCallback callback);
 
     /** Unvote and Query the VM to Stop on its own if possible */
-    oneway void request_stop();
+    oneway void request_stop(IVirtualMachineCallback callback);
 
 
 
