@@ -15,7 +15,7 @@ hidl_interface {
     ],
     apex_available: [
         "//apex_available:platform",
-         "com.android.btservices",
+         "com.android.bt",
     ],
     gen_java: false,
 }
