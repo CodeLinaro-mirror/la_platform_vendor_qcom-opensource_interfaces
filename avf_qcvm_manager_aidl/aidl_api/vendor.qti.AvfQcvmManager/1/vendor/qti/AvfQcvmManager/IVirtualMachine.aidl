@@ -21,6 +21,6 @@ package vendor.qti.AvfQcvmManager;
 interface IVirtualMachine {
   vendor.qti.AvfQcvmManager.VmInfo getVmInfo();
   oneway void start(vendor.qti.AvfQcvmManager.IVirtualMachineCallback callback);
-  oneway void stop();
-  oneway void request_stop();
+  oneway void stop(vendor.qti.AvfQcvmManager.IVirtualMachineCallback callback);
+  oneway void request_stop(vendor.qti.AvfQcvmManager.IVirtualMachineCallback callback);
 }
