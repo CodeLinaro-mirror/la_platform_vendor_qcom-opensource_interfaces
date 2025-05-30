@@ -3,6 +3,7 @@ aidl_interface {
     vendor_available: true,
     srcs: ["vendor/qti/hardware/debugutils/*.aidl"],
     stability: "vintf",
+    owner: "qti",
     backend: {
         cpp: {
             enabled: false,

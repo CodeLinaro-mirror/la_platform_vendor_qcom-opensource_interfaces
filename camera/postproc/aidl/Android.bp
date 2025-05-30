@@ -3,6 +3,7 @@
 aidl_interface {
     name: "vendor.qti.hardware.camera.postproc",
     vendor_available: true,
+    owner: "qti",
 
     srcs: ["vendor/qti/hardware/camera/postproc/*.aidl"],
     imports: [

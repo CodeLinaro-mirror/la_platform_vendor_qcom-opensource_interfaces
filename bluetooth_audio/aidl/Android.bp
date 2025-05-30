@@ -6,6 +6,7 @@ aidl_interface {
         "vendor/qti//hardware/bluetooth/audio/*.aidl",
     ],
     stability: "vintf",
+    owner: "qti",
     backend: {
         ndk: {
             apex_available: [
