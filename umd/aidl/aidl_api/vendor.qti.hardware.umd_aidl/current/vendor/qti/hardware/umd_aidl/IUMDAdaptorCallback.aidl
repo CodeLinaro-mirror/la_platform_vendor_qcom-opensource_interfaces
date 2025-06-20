@@ -1,7 +1,7 @@
 /*
-* Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
-* SPDX-License-Identifier: BSD-3-Clause-Clear
-*/
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ * SPDX-License-Identifier: BSD-3-Clause-Clear
+ */
 ///////////////////////////////////////////////////////////////////////////////
 // THIS FILE IS IMMUTABLE. DO NOT EDIT IN ANY CASE.                          //
 ///////////////////////////////////////////////////////////////////////////////
@@ -20,9 +20,9 @@
 // with such a backward incompatible change, it has a high risk of breaking
 // later when a module using the interface is updated, e.g., Mainline modules.
 
-package vendor.qti.hardware.umdservice;
+package vendor.qti.hardware.umd_aidl;
 @VintfStability
 interface IUMDAdaptorCallback {
   int onAudioBufferReceive(in byte[] data);
-  void onAudioUevent(in vendor.qti.hardware.umdservice.AudioStatus status);
+  void onAudioUevent(in vendor.qti.hardware.umd_aidl.AudioStatus status);
 }
