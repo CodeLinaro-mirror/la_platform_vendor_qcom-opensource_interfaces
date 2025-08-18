@@ -22,7 +22,6 @@
 
 package vendor.qti.hardware.wifi.supplicant;
 @VintfStability
-interface ISupplicantVendor {
-  vendor.qti.hardware.wifi.supplicant.ISupplicantVendorStaIface getVendorInterface(in vendor.qti.hardware.wifi.supplicant.IVendorIfaceInfo ifaceInfo);
-  vendor.qti.hardware.wifi.supplicant.IVendorIfaceInfo[] listVendorInterfaces();
+interface ISupplicantVendorStaIfaceCallback {
+  oneway void onCtrlEvent(String ifaceName, String eventStr);
 }
