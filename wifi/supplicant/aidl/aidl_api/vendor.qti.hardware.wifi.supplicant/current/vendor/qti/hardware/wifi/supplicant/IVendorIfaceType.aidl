@@ -1,4 +1,4 @@
-/* Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+/* Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
  *
  * SPDX-License-Identifier: BSD-3-Clause-Clear
  */
@@ -23,5 +23,5 @@
 package vendor.qti.hardware.wifi.supplicant;
 @Backing(type="int") @VintfStability
 enum IVendorIfaceType {
-  STA,
+  STA = 0,
 }

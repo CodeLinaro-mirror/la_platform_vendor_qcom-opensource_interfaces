@@ -1,4 +1,4 @@
-/* Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+/* Copyright (c) 2022 Qualcomm Innovation Center, Inc. All rights reserved.
  *
  * SPDX-License-Identifier: BSD-3-Clause-Clear
  */
@@ -24,5 +24,4 @@ package vendor.qti.hardware.wifi.supplicant;
 @VintfStability
 interface ISupplicantVendorStaIface {
   String doDriverCmd(in String command);
-  void registerSupplicantVendorStaIfaceCallback(in vendor.qti.hardware.wifi.supplicant.ISupplicantVendorStaIfaceCallback callback);
 }
