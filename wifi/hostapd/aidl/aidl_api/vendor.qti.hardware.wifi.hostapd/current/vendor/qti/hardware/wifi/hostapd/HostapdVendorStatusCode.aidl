@@ -34,8 +34,8 @@
 package vendor.qti.hardware.wifi.hostapd;
 @Backing(type="int") @VintfStability
 enum HostapdVendorStatusCode {
-  SUCCESS = 0,
-  FAILURE_UNKNOWN = 1,
-  FAILURE_ARGS_INVALID = 2,
-  FAILURE_IFACE_UNKNOWN = 3,
+  SUCCESS,
+  FAILURE_UNKNOWN,
+  FAILURE_ARGS_INVALID,
+  FAILURE_IFACE_UNKNOWN,
 }
