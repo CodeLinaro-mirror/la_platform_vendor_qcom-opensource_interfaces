@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
  * SPDX-License-Identifier: BSD-3-Clause-Clear
  */
 
@@ -46,4 +46,10 @@ parcelable QRRegisterInfo {
      * performed consecutively at the native streaming rate of the image sensor.
      */
     int detectionPerDelivery;
+
+    /**
+     * This specifies whether QR code decoding should be performed after QR code is detected
+     * This additional step costs additional latency/memory/power
+     */
+    boolean performQRDecode;
 }

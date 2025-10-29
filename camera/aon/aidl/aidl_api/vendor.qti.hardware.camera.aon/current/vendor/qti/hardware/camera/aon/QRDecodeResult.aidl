@@ -22,14 +22,7 @@
 
 package vendor.qti.hardware.camera.aon;
 @VintfStability
-parcelable FaceInfoProPerFace {
-  int angleRoll;
-  int angleYaw;
-  int width;
-  int height;
-  vendor.qti.hardware.camera.aon.FacePosType center;
-  boolean isGazeDetected;
-  boolean isFaceDetected;
-  @nullable vendor.qti.hardware.camera.aon.PersonInfoType personInfo;
-  int anglePitch;
+parcelable QRDecodeResult {
+  String decodedString;
+  int version;
 }
