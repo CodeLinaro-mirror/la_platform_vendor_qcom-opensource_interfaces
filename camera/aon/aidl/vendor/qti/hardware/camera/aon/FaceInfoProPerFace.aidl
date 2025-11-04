@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2023-2024 Qualcomm Innovation Center, Inc. All rights reserved.
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
  * SPDX-License-Identifier: BSD-3-Clause-Clear
  */
 
@@ -53,4 +53,10 @@ parcelable FaceInfoProPerFace {
      * PersonInfo of the ROI which will always be valid
      */
     @nullable PersonInfoType personInfo;
+    /**
+     * Indicates the up/down direction of the face
+     * Valid values: -180 through 179, where a positive value means the face is
+     * facing down
+     */
+    int anglePitch;
 }
