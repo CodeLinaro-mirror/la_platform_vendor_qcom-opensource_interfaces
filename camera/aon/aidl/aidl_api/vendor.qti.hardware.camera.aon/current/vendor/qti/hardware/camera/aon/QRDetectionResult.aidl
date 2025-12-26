@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2024 Qualcomm Innovation Center, Inc. All rights reserved.
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
  * SPDX-License-Identifier: BSD-3-Clause-Clear
  */
 ///////////////////////////////////////////////////////////////////////////////
@@ -28,4 +28,5 @@ parcelable QRDetectionResult {
   int dimHeight;
   vendor.qti.hardware.camera.aon.CameraRectangle rect;
   vendor.qti.hardware.camera.aon.QRDetectionResultType resultType;
+  @nullable vendor.qti.hardware.camera.aon.QRDecodeResult QRdecodeResult;
 }
