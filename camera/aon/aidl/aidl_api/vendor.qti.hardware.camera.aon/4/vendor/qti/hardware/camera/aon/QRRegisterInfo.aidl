@@ -22,7 +22,10 @@
 
 package vendor.qti.hardware.camera.aon;
 @VintfStability
-parcelable AONSensorInfo {
-  vendor.qti.hardware.camera.aon.PositionType position;
-  vendor.qti.hardware.camera.aon.AONSensorCap[] sensorCaps;
+parcelable QRRegisterInfo {
+  int qrEvtTypeMask;
+  vendor.qti.hardware.camera.aon.DeliveryMode deliveryMode;
+  int deliveryPeriodMs;
+  int detectionPerDelivery;
+  boolean performQRDecode;
 }
