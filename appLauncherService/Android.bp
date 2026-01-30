@@ -1,0 +1,22 @@
+aidl_interface {
+    name: "app_launcher_service_aidl",
+    srcs: ["aidl/vendor/qti/appLauncherService/*.aidl"],
+    stability: "vintf",
+    local_include_dir: "aidl",
+    backend: {
+        java: {
+            enabled: true,
+            sdk_version: "module_current",
+        },
+        cpp: {
+            enabled: true,
+        },
+        ndk: {
+            enabled: true,
+        },
+
+    },
+    vendor_available: true,
+    frozen: false,
+    owner: "qti",
+}
