@@ -1,5 +1,6 @@
 aidl_interface {
     name: "vendor.qti.AvfQcvmManager",
+    owner: "qti",
     srcs: ["vendor/qti/AvfQcvmManager/*.aidl"],
     system_ext_specific: true,
     vendor_available: true,
