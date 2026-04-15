@@ -1,0 +1,28 @@
+aidl_interface {
+    name: "vendor.qti.qaior.screen_understanding",
+    srcs: [
+        "vendor/qti/qaior/screen_understanding/*.aidl",
+    ],
+    system_ext_specific: true,
+    stability: "vintf",
+    backend: {
+        cpp: {
+            enabled: false,
+        },
+        ndk: {
+            enabled: false,
+        },
+        java: {
+            enabled: true,
+            platform_apis: true,
+        },
+    },
+    frozen: true,
+    versions_with_info: [
+        {
+            version: "1",
+            imports: [],
+        },
+    ],
+
+}

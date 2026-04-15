@@ -1,0 +1,29 @@
+aidl_interface {
+    name: "vendor.qti.screen_understanding.display_capture",
+    srcs: [
+        "vendor/qti/screen_understanding/display_capture/*.aidl",
+    ],
+    vendor_available: true,
+    system_ext_specific: true,
+    stability: "vintf",
+    backend: {
+        cpp: {
+            enabled: true,
+        },
+        ndk: {
+            enabled: true,
+        },
+        java: {
+            enabled: true,
+            platform_apis: true,
+        },
+    },
+    frozen: true,
+    versions_with_info: [
+        {
+            version: "1",
+            imports: [],
+        },
+    ],
+
+}
