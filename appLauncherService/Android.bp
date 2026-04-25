@@ -18,12 +18,12 @@ aidl_interface {
     },
     vendor_available: true,
     owner: "qti",
+    frozen: true,
     versions_with_info: [
         {
             version: "1",
             imports: [],
         },
     ],
-    frozen: true,
 
 }
