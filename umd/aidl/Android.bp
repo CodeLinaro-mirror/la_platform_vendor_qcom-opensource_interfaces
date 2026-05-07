@@ -1,24 +1,21 @@
-// This is the expected build file, but it may not be right in all cases
-
 aidl_interface {
-    name: "vendor.qti.hardware.umdservice",
+    name: "vendor.qti.hardware.umd_aidl",
     vendor_available: true,
+    srcs: ["vendor/qti/hardware/umd_aidl/*.aidl"],
     host_supported: true,
-    frozen: true,
-    srcs: ["vendor/qti/hardware/umdservice/*.aidl"],
     stability: "vintf",
     backend: {
         cpp: {
-            // FIXME should this be disabled?
-            // prefer NDK backend which can be used anywhere
-            // If you disable this, you also need to delete the C++
-            // translate code.
-            enabled: true,
+            enabled: false,
         },
         java: {
-            sdk_version: "system_current",
+            sdk_version: "module_current",
+        },
+        ndk: {
+            enabled: true,
         },
     },
+    owner: "qti",
     versions_with_info: [
         {
             version: "1",
