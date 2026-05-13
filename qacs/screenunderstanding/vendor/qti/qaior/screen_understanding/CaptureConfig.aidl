@@ -56,4 +56,15 @@ parcelable CaptureConfig {
      * Optional Smart Selection configuration.
      */
     @nullable SmartSelectionConfig smartConfig;
+
+    /**
+    * Optional algorithm-specific configuration data.
+    */
+    @nullable byte[] algoConfigBlob;
+
+    /**
+    * Notification timeout in ms for accessibility service.
+    * Valid range: greater than 50
+    */
+    int notificationTimeout = 50;
 }
