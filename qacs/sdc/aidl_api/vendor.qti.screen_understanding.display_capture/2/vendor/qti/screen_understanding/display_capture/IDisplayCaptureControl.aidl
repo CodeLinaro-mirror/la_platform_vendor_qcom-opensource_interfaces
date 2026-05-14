@@ -22,13 +22,11 @@
 
 package vendor.qti.screen_understanding.display_capture;
 @VintfStability
-parcelable CaptureConfig {
-  int width;
-  int height;
-  vendor.qti.screen_understanding.display_capture.PixelFormat format;
-  int framerate;
-  int userId;
-  vendor.qti.screen_understanding.display_capture.AppInfo[] appList;
-  @nullable vendor.qti.screen_understanding.display_capture.SmartSelectionConfig smartConfig;
-  @nullable byte[] algoConfigBlob;
+interface IDisplayCaptureControl {
+  long createControlSession(in vendor.qti.screen_understanding.display_capture.IDisplayCaptureControlCallback callback, in vendor.qti.screen_understanding.display_capture.CaptureConfig config);
+  vendor.qti.screen_understanding.display_capture.Status updateControlConfig(long sessionId, in vendor.qti.screen_understanding.display_capture.CaptureConfig config);
+  vendor.qti.screen_understanding.display_capture.Status triggerCapture(long sessionId, in vendor.qti.screen_understanding.display_capture.CaptureParams params);
+  vendor.qti.screen_understanding.display_capture.Status addCaptureFd(long sessionId, in vendor.qti.screen_understanding.display_capture.CaptureParams params, in ParcelFileDescriptor captureFd);
+  vendor.qti.screen_understanding.display_capture.Status deleteCapture(long sessionId, in vendor.qti.screen_understanding.display_capture.DeleteConfig deleteConfig);
+  vendor.qti.screen_understanding.display_capture.Status destroyControlSession(long sessionId);
 }

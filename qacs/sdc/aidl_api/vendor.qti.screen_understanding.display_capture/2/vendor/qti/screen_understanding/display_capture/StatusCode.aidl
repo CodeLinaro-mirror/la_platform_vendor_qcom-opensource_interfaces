@@ -22,13 +22,12 @@
 
 package vendor.qti.screen_understanding.display_capture;
 @VintfStability
-parcelable CaptureConfig {
-  int width;
-  int height;
-  vendor.qti.screen_understanding.display_capture.PixelFormat format;
-  int framerate;
-  int userId;
-  vendor.qti.screen_understanding.display_capture.AppInfo[] appList;
-  @nullable vendor.qti.screen_understanding.display_capture.SmartSelectionConfig smartConfig;
-  @nullable byte[] algoConfigBlob;
+enum StatusCode {
+  OK = 0,
+  INVALID_SESSION = 1,
+  INVALID_CONFIG = 2,
+  PERMISSION_DENIED = 3,
+  CAPTURE_FAILED = 4,
+  UNSUPPORTED_OPERATION = 5,
+  INTERNAL_ERROR = 6,
 }

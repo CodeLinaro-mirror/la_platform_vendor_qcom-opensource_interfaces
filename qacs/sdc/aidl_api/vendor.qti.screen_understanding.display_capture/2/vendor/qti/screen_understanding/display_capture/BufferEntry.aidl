@@ -22,13 +22,11 @@
 
 package vendor.qti.screen_understanding.display_capture;
 @VintfStability
-parcelable CaptureConfig {
+parcelable BufferEntry {
+  ParcelFileDescriptor fd;
+  String type;
   int width;
   int height;
   vendor.qti.screen_understanding.display_capture.PixelFormat format;
-  int framerate;
-  int userId;
-  vendor.qti.screen_understanding.display_capture.AppInfo[] appList;
-  @nullable vendor.qti.screen_understanding.display_capture.SmartSelectionConfig smartConfig;
-  @nullable byte[] algoConfigBlob;
+  vendor.qti.screen_understanding.display_capture.CompressionCodec codec;
 }
