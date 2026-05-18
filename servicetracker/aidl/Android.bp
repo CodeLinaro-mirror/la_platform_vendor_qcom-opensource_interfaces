@@ -1,5 +1,6 @@
 aidl_interface {
     name: "vendor.qti.hardware.servicetrackeraidl",
+    owner: "qti",
     vendor_available: true,
     host_supported: true,
     //KEYSTONE(I3a8f237ea72926b59a76da72e59b303ef1ba0eee,b/425496687)
