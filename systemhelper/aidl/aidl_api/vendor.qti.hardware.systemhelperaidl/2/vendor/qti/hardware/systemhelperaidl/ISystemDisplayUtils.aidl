@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
  * SPDX-License-Identifier: BSD-3-Clause-Clear
  */
@@ -20,9 +20,13 @@
 // with such a backward incompatible change, it has a high risk of breaking
 // later when a module using the interface is updated, e.g., Mainline modules.
 
-package vendor.qti.appLauncherService;
+package vendor.qti.hardware.systemhelperaidl;
 @VintfStability
-interface IAppLauncherService {
-  void startService(String pkgName, String serviceName);
-  void stopService(String pkgName, String serviceName);
+interface ISystemDisplayUtils {
+  void init();
+  vendor.qti.hardware.systemhelperaidl.OutDisplayConfig dequeueBuffer(out android.hardware.common.NativeHandle fd);
+  void enqueueBuffer();
+  void freeAllBuffers();
+  void cancelAllBuffers();
+  void releaseAllBuffers();
 }
