@@ -22,14 +22,9 @@
 
 package vendor.qti.qaior.screen_understanding;
 @VintfStability
-parcelable CaptureConfig {
-  int width;
-  int height;
-  vendor.qti.qaior.screen_understanding.PixelFormat format;
-  int framerate;
-  int userId;
-  vendor.qti.qaior.screen_understanding.AppInfo[] appList;
-  @nullable vendor.qti.qaior.screen_understanding.SmartSelectionConfig smartConfig;
-  @nullable byte[] algoConfigBlob;
-  int notificationTimeout = 50;
+interface IScreenUnderstandingService {
+  void startCapture(in vendor.qti.qaior.screen_understanding.CaptureConfig config, in vendor.qti.qaior.screen_understanding.IScreenUnderstandingCallback callback);
+  void updateCaptureConfig(long sessionId, in vendor.qti.qaior.screen_understanding.CaptureConfig config);
+  void stopCapture(long sessionId);
+  void deleteCapture(long sessionId, in vendor.qti.qaior.screen_understanding.DeleteConfig config);
 }
