@@ -22,13 +22,7 @@
 
 package vendor.qti.screen_understanding.display_capture;
 @VintfStability
-parcelable CaptureConfig {
-  int width;
-  int height;
-  vendor.qti.screen_understanding.display_capture.PixelFormat format;
-  int framerate;
-  int userId;
-  vendor.qti.screen_understanding.display_capture.AppInfo[] appList;
-  @nullable vendor.qti.screen_understanding.display_capture.SmartSelectionConfig smartConfig;
-  @nullable byte[] algoConfigBlob;
+enum PixelFormat {
+  UNKNOWN = 0,
+  RGBA_8888 = 1,
 }

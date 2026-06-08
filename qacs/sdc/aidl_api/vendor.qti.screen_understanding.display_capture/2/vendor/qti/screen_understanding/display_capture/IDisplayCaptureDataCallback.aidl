@@ -22,13 +22,10 @@
 
 package vendor.qti.screen_understanding.display_capture;
 @VintfStability
-parcelable CaptureConfig {
-  int width;
-  int height;
-  vendor.qti.screen_understanding.display_capture.PixelFormat format;
-  int framerate;
-  int userId;
-  vendor.qti.screen_understanding.display_capture.AppInfo[] appList;
-  @nullable vendor.qti.screen_understanding.display_capture.SmartSelectionConfig smartConfig;
-  @nullable byte[] algoConfigBlob;
+interface IDisplayCaptureDataCallback {
+  void onBufferReceived(in vendor.qti.screen_understanding.display_capture.BufferInfo[] buffers);
+  void onDeleteRequest(in vendor.qti.screen_understanding.display_capture.DeleteConfig deleteConfig);
+  void onSubscribed(long sessionId);
+  void onUnsubscribed(long sessionId);
+  void onError(long sessionId, in vendor.qti.screen_understanding.display_capture.Status status);
 }

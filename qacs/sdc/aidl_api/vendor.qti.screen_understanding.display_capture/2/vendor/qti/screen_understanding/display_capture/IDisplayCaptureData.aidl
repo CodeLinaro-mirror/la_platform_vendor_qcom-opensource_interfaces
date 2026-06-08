@@ -22,13 +22,8 @@
 
 package vendor.qti.screen_understanding.display_capture;
 @VintfStability
-parcelable CaptureConfig {
-  int width;
-  int height;
-  vendor.qti.screen_understanding.display_capture.PixelFormat format;
-  int framerate;
-  int userId;
-  vendor.qti.screen_understanding.display_capture.AppInfo[] appList;
-  @nullable vendor.qti.screen_understanding.display_capture.SmartSelectionConfig smartConfig;
-  @nullable byte[] algoConfigBlob;
+interface IDisplayCaptureData {
+  long subscribe(in vendor.qti.screen_understanding.display_capture.IDisplayCaptureDataCallback callback, in vendor.qti.screen_understanding.display_capture.ReceiverConfig config);
+  vendor.qti.screen_understanding.display_capture.Status updateReceiverConfig(long sessionId, in vendor.qti.screen_understanding.display_capture.ReceiverConfig config);
+  vendor.qti.screen_understanding.display_capture.Status unsubscribe(long sessionId);
 }
