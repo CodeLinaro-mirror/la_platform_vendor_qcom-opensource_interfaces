@@ -1,13 +1,7 @@
 /*
  * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
  * SPDX-License-Identifier: BSD-3-Clause-Clear
- *//**
- * @file ADCCallbackSystemEvents.aidl
- * @brief Struct for the different system callback events for ambient data capture.
- *
- * This struct contains the different system callback events with system event command type and
- * optional event configurations blob for the ambient data capture system callback event.
- */
+*/
 ///////////////////////////////////////////////////////////////////////////////
 // THIS FILE IS IMMUTABLE. DO NOT EDIT IN ANY CASE.                          //
 ///////////////////////////////////////////////////////////////////////////////
@@ -26,16 +20,10 @@
 // with such a backward incompatible change, it has a high risk of breaking
 // later when a module using the interface is updated, e.g., Mainline modules.
 
-package vendor.qti.hardware.qacs.ambientdatacapture;
+package vendor.qti.hardware.camera.postproc;
 @VintfStability
-parcelable ADCCallbackSystemEvents {
-  vendor.qti.hardware.qacs.ambientdatacapture.ADCCallbackSystemEvents.EventSystemCommandType eventSystemCommandType;
-  @nullable byte[] eventSystemConfigsBlob;
-  @Backing(type="int") @VintfStability
-  enum EventSystemCommandType {
-    INVALID = 0,
-    POWER_STATE_CHANGE = 1,
-    HARDWARE_RESET = 2,
-    HOT_PLUG = 3,
-  }
+parcelable BufferParams {
+  int format;
+  int width;
+  int height;
 }
