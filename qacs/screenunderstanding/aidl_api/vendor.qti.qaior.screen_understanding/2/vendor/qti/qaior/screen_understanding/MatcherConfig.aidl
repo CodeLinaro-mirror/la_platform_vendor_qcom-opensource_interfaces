@@ -22,14 +22,6 @@
 
 package vendor.qti.qaior.screen_understanding;
 @VintfStability
-parcelable CaptureConfig {
-  int width;
-  int height;
-  vendor.qti.qaior.screen_understanding.PixelFormat format;
-  int framerate;
-  int userId;
-  vendor.qti.qaior.screen_understanding.AppInfo[] appList;
-  @nullable vendor.qti.qaior.screen_understanding.SmartSelectionConfig smartConfig;
-  @nullable byte[] algoConfigBlob;
-  int notificationTimeout = 50;
+parcelable MatcherConfig {
+  float minCossim;
 }

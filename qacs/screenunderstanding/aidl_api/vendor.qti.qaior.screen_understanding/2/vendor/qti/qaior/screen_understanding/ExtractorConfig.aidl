@@ -22,14 +22,9 @@
 
 package vendor.qti.qaior.screen_understanding;
 @VintfStability
-parcelable CaptureConfig {
-  int width;
+parcelable ExtractorConfig {
+  int topK;
   int height;
-  vendor.qti.qaior.screen_understanding.PixelFormat format;
-  int framerate;
-  int userId;
-  vendor.qti.qaior.screen_understanding.AppInfo[] appList;
-  @nullable vendor.qti.qaior.screen_understanding.SmartSelectionConfig smartConfig;
-  @nullable byte[] algoConfigBlob;
-  int notificationTimeout = 50;
+  float detectionThreshold;
+  boolean isPath;
 }

@@ -22,4 +22,10 @@ parcelable AppInfo {
      * Sensitive apps may require restricted capture behavior.
      */
     boolean isSensitive;
+
+    /**
+     * Application category.
+     * Example: "healthcare", "finance", "personal".
+     */
+    @nullable String category;
 }

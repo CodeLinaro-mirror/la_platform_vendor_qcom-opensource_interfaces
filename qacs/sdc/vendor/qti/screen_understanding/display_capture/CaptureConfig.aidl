@@ -56,4 +56,9 @@ parcelable CaptureConfig {
      * Optional Smart Selection configuration.
      */
     @nullable SmartSelectionConfig smartConfig;
+
+    /**
+    * Optional algorithm-specific configuration data.
+    */
+    @nullable byte[] algoConfigBlob;
 }

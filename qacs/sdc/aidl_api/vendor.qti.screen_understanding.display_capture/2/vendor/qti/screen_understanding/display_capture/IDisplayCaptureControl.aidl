@@ -20,16 +20,13 @@
 // with such a backward incompatible change, it has a high risk of breaking
 // later when a module using the interface is updated, e.g., Mainline modules.
 
-package vendor.qti.qaior.screen_understanding;
+package vendor.qti.screen_understanding.display_capture;
 @VintfStability
-parcelable CaptureConfig {
-  int width;
-  int height;
-  vendor.qti.qaior.screen_understanding.PixelFormat format;
-  int framerate;
-  int userId;
-  vendor.qti.qaior.screen_understanding.AppInfo[] appList;
-  @nullable vendor.qti.qaior.screen_understanding.SmartSelectionConfig smartConfig;
-  @nullable byte[] algoConfigBlob;
-  int notificationTimeout = 50;
+interface IDisplayCaptureControl {
+  long createControlSession(in vendor.qti.screen_understanding.display_capture.IDisplayCaptureControlCallback callback, in vendor.qti.screen_understanding.display_capture.CaptureConfig config);
+  vendor.qti.screen_understanding.display_capture.Status updateControlConfig(long sessionId, in vendor.qti.screen_understanding.display_capture.CaptureConfig config);
+  vendor.qti.screen_understanding.display_capture.Status triggerCapture(long sessionId, in vendor.qti.screen_understanding.display_capture.CaptureParams params);
+  vendor.qti.screen_understanding.display_capture.Status addCaptureFd(long sessionId, in vendor.qti.screen_understanding.display_capture.CaptureParams params, in ParcelFileDescriptor captureFd);
+  vendor.qti.screen_understanding.display_capture.Status deleteCapture(long sessionId, in vendor.qti.screen_understanding.display_capture.DeleteConfig deleteConfig);
+  vendor.qti.screen_understanding.display_capture.Status destroyControlSession(long sessionId);
 }
