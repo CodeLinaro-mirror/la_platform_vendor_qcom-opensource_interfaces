@@ -1,7 +1,7 @@
 /*
-* Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
-* SPDX-License-Identifier: BSD-3-Clause-Clear
-*/
+ * Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+ * SPDX-License-Identifier: BSD-3-Clause-Clear
+ */
 ///////////////////////////////////////////////////////////////////////////////
 // THIS FILE IS IMMUTABLE. DO NOT EDIT IN ANY CASE.                          //
 ///////////////////////////////////////////////////////////////////////////////
@@ -20,12 +20,12 @@
 // with such a backward incompatible change, it has a high risk of breaking
 // later when a module using the interface is updated, e.g., Mainline modules.
 
-package vendor.qti.hardware.umdservice;
+package vendor.qti.hardware.umd_aidl;
 @Backing(type="int") @VintfStability
 enum AudioStatus {
-  AUDIO_STATE_INVALID,
-  AUDIO_STATE_PLAYBACK,
-  AUDIO_STATE_CAPTURE,
-  AUDIO_STATE_PLAYBACK_CAPTURE,
-  AUDIO_STATE_PAUSED,
+  AUDIO_STATE_INVALID = 0,
+  AUDIO_STATE_PLAYBACK = 1,
+  AUDIO_STATE_CAPTURE = 2,
+  AUDIO_STATE_PLAYBACK_CAPTURE = 3,
+  AUDIO_STATE_PAUSED = 4,
 }
