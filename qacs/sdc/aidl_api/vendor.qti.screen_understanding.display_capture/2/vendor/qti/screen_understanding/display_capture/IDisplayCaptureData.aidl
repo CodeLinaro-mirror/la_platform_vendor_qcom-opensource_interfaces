@@ -20,16 +20,10 @@
 // with such a backward incompatible change, it has a high risk of breaking
 // later when a module using the interface is updated, e.g., Mainline modules.
 
-package vendor.qti.qaior.screen_understanding;
+package vendor.qti.screen_understanding.display_capture;
 @VintfStability
-parcelable CaptureConfig {
-  int width;
-  int height;
-  vendor.qti.qaior.screen_understanding.PixelFormat format;
-  int framerate;
-  int userId;
-  vendor.qti.qaior.screen_understanding.AppInfo[] appList;
-  @nullable vendor.qti.qaior.screen_understanding.SmartSelectionConfig smartConfig;
-  @nullable byte[] algoConfigBlob;
-  int notificationTimeout = 50;
+interface IDisplayCaptureData {
+  long subscribe(in vendor.qti.screen_understanding.display_capture.IDisplayCaptureDataCallback callback, in vendor.qti.screen_understanding.display_capture.ReceiverConfig config);
+  vendor.qti.screen_understanding.display_capture.Status updateReceiverConfig(long sessionId, in vendor.qti.screen_understanding.display_capture.ReceiverConfig config);
+  vendor.qti.screen_understanding.display_capture.Status unsubscribe(long sessionId);
 }
