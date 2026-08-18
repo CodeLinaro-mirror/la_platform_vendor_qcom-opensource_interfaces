@@ -20,15 +20,12 @@
 // with such a backward incompatible change, it has a high risk of breaking
 // later when a module using the interface is updated, e.g., Mainline modules.
 
-package vendor.qti.hardware.systemhelperaidl;
-@Backing(type="long") @VintfStability
-enum SystemEventType {
-  PHONE_STATE_RINGING = 0x1,
-  PHONE_STATE_OFF_HOOK = 0x2,
-  PHONE_STATE_IDLE = 0x4,
-  ACTION_SCREEN_OFF = 0x8,
-  ACTION_SCREEN_ON = 0x10,
-  ACTION_SHUTDOWN = 0x20,
-  ACTION_USER_PRESENT = 0x40,
-  SYSTEM_EVENT_MAX = (0x80 - 1) /* 127 */,
+package vendor.qti.hardware.umd_aidl;
+@Backing(type="int") @VintfStability
+enum AudioStatus {
+  AUDIO_STATE_INVALID = 0,
+  AUDIO_STATE_PLAYBACK = 1,
+  AUDIO_STATE_CAPTURE = 2,
+  AUDIO_STATE_PLAYBACK_CAPTURE = 3,
+  AUDIO_STATE_PAUSED = 4,
 }
