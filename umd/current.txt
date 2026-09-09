@@ -1,0 +1,7 @@
+#Copyright (c) Qualcomm Technologies, Inc. and/or its subsidiaries.
+#SPDX-License-Identifier: BSD-3-Clause-Clear
+
+#HAL released in Android Q
+475005afcc43b6cc14fded788c047c8812fc82f83a4d0d86979ec4d39d87066c vendor.qti.hardware.umd@1.0::types
+052170d15a083a3ef8270fe098b700db4eb4028cf4ee27049c3ffe29d6b6cfde vendor.qti.hardware.umd@1.0::IUMDAdaptor
+819a55e6be2a0b6f4f7d7a7bf1851d4a6f0abf90def6e1457777b529a1cda430 vendor.qti.hardware.umd@1.0::IUMDAdaptorCallback
