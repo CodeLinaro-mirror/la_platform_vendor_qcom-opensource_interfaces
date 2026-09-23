@@ -1,0 +1,31 @@
+aidl_interface {
+    name: "vendor.qti.hardware.spinor_updater",
+    vendor_available: true,
+    recovery_available: true,
+    srcs: [
+        "aidl/vendor/qti/hardware/spinor_updater/*.aidl",
+    ],
+    local_include_dir: "aidl",
+    stability: "vintf",
+    owner: "qti",
+
+    backend: {
+        java: {
+            enabled: false,
+        },
+        cpp: {
+            enabled: false,
+        },
+        ndk: {
+            enabled: true,
+        },
+    },
+    frozen: true,
+    versions_with_info: [
+        {
+            version: "1",
+            imports: [],
+        },
+    ],
+
+}
